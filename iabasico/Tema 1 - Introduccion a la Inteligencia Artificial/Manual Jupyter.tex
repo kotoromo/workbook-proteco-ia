@@ -1,0 +1,202 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[]{algorithm2e}
+
+\graphicspath{ {./manual_img/} }
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\begin{document}
+    \tableofcontents
+    \newpage
+
+    \section{Instalaci\'{o}n de Python 3.6 con Anaconda}
+        \subsection{Windows}
+            La instalaci\'{o}n de Anaconda Navigator es muy sencilla en Windows:
+            \begin{enumerate}
+                \item Acceder a la \href{https://www.anaconda.com/download/}{p\'{a}gina oficial de descarga} de 
+                    Anaconda.
+                \item Descargar la versi\'{o}n de Anaconda para Python 3.6.
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=\textwidth]{anaconda1}
+                    \caption{Dar click en Download para descargar.}
+                \end{figure}
+
+                \item Ejecutar el instalador descargado.
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=\textwidth]{anaconda2}
+                    \caption{Dar doble click.}
+                \end{figure}
+
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=\textwidth]{anaconda3}
+                    \caption{Dejar las cajas sin marcar y dar click en Install.}
+                \end{figure}
+
+                \item ¡Felicidades! Ya tienes Anaconda Instalado.
+            \end{enumerate}
+
+            \newpage
+
+        \subsection{GNU/Linux}
+            \begin{enumerate}
+                \item Acceder a la \href{https://www.anaconda.com/download/}{p\'{a}gina oficial de descarga} de 
+                    Anaconda.
+                \item Descargar la versi\'{o}n de Anaconda para Python 3.6.
+
+                \item Correr el script: \textit{bash ~/Downloads/Anaconda3-5.2.0-Linux-x86\_64.sh}
+
+                \item Seguir las indicaciones del instalador.
+
+                \item Al finalizar el instalador, reiniciar la sesi\'{o}n de bash/zshell/lo que sea para
+                que los cambios hagan efecto.
+
+                \item Para abrir Anaconda Navigator, ejecutar el siguiente comando: \textit{anaconda-navigator}
+            \end{enumerate}
+            \newpage
+    \section{Instalaci\'{o}n de Python 2.7 con Anaconda}
+        \subsection{Windows}
+        
+        El proceso es el mismo que con Python 3.6; la diferencia radica en que hay que seleccionar para descargar
+        el instalador de Anaconda con Python 2.7.
+        \subsection{GNU/Linux}
+        El proceso es el mismo que con Python 3.6; la diferencia radica en que hay que seleccionar para descargar
+        el instalador de Anaconda con Python 2.7.
+
+    \section{Instalaci\'{o}n de Jupyter}
+        \subsection{Windows}
+            Abrir Anaconda Navigator y, una vez en el dashboard, seleccionar 'Install' en el recuadro que
+            ofrece instalar Jupyter.
+        \subsection{GNU/Linux}
+            Abrir Anaconda Navigator y, una vez en el dashboard, seleccionar 'Install' en el recuadro que
+            ofrece instalar Jupyter.
+    
+    \newpage
+    \section{Manual de Markdown para dar formato a celdas en Jupyter}
+        \begin{itemize}
+            \item Para incluir \textbf{LaTeX}:\$[C\'{o}digo LaTeX aqu\'{i}]\$
+            \item Para hacer negritas: **\textbf{[Texto en negritas]}** o \_\_\textbf{[Texto en negritas]}\_\_
+            \item Para hacer italics: *\textit{[Texto en italics]}* o \_\textit{[Texto en italics]}\_ 
+            \item Para hacer listas: 
+            \begin{figure}[H]
+                \begin{subfigure}{0.5\textwidth}
+                    \includegraphics[width=0.9\linewidth]{lista1}
+                    \caption{As\'{i} se crean las listas.}
+                \end{subfigure}
+                \begin{subfigure}{0.5\textwidth}
+                    \includegraphics[width=0.9\linewidth]{lista2}
+                    \caption{As\'{i} lucen tras ejecutar el c\'{o}digo Markdown.}
+                \end{subfigure}
+            \end{figure}
+
+            \item As\'{i} se incluyen enlaces: [Google](https://www.google.com)
+
+            \item As\'{i} se incluyen im\'{a}genes de Internet: ![alt text](enlace\_a\_imagen)
+            \item Para hacer tablas:
+            \begin{figure}[H]
+                \begin{subfigure}{0.5\textwidth}
+                    \includegraphics[width=0.9\linewidth]{tabla1}
+                    \caption{As\'{i} se crean las tablas.}
+                \end{subfigure}
+                \begin{subfigure}{0.5\textwidth}
+                    \includegraphics[width=0.9\linewidth]{tabla2}
+                    \caption{As\'{i} lucen tras ejecutar el c\'{o}digo Markdown.}
+                \end{subfigure}
+            \end{figure}
+        \end{itemize}
+    \newpage
+        \section{Manual de uso b\'{a}sico de Jupyter}
+            \begin{itemize}
+                \item Para crear un nuevo documento:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=\textwidth]{Jupyter1}
+                    \caption{Seleccionar la opci\'{o}n de Python 3.}
+                \end{figure}
+
+                \item Para ejecutar c\'{o}digo de Python, escribir el c\'{o}digo en una celda
+                vac\'{i}a y presionar la combinaci\'{o}n de teclas $CTRL+Enter$.
+
+                \begin{figure}[H]
+                    \begin{subfigure}{0.5\textwidth}
+                        \includegraphics[width=0.9\linewidth]{Jupyter2}
+                        \caption{Celda vac\'{i}a.}
+                    \end{subfigure}
+                    \begin{subfigure}{0.5\textwidth}
+                        \includegraphics[width=0.9\linewidth]{Jupyter3}
+                        \caption{Celda tras ejecutar el c\'{o}digo.}
+                    \end{subfigure}
+                \end{figure}
+
+                \item Para insertar una nueva celda:
+                \begin{figure}[H]
+                    \begin{subfigure}{0.5\textwidth}
+                        \includegraphics[width=0.9\linewidth]{Jupyter4}
+                        \caption{Seleccionar $insert$ y luego cualquiera de las dos opciones.}
+                    \end{subfigure}
+                    \begin{subfigure}{0.5\textwidth}
+                        \includegraphics[width=0.9\linewidth]{Jupyter5}
+                        \caption{Insert below inserta la celda debajo de la celda actual. Insert above
+                        inserta la nueva celda encima de la celda actual.}
+                    \end{subfigure}
+                \end{figure}
+
+                \item Para eliminar una celda primero hay que seleccionar la celda a eliminar.
+                \begin{figure}[H]
+                    \begin{subfigure}{0.5\textwidth}
+                        \includegraphics[width=0.9\linewidth]{Jupyter5}
+                        \caption{Celda seleccionada. Se observa un color a la izquierda que indica
+                        la selecci\'{o}n.}
+                    \end{subfigure}
+                    \begin{subfigure}{0.5\textwidth}
+                        \includegraphics[width=0.9\linewidth]{Jupyter6}
+                        \caption{Seleccionar \textit{Delete Cells}}
+                    \end{subfigure}
+                \end{figure}
+
+                \newpage
+                \item Para cambiar el tipo de celda a \textit{Markdown}:
+                \begin{figure}[H]
+                    \begin{subfigure}{0.5\textwidth}
+                        \includegraphics[width=0.9\linewidth]{Jupyter5}
+                        \caption{Seleccionar la celda deseada.}
+                    \end{subfigure}
+                    \begin{subfigure}{0.5\textwidth}
+                        \includegraphics[width=0.9\linewidth]{Jupyter7}
+                        \caption{Seleccionar \textit{Markdown}. Observe como cambia la celda.}
+                    \end{subfigure}
+                \end{figure}
+
+
+            \end{itemize}
+
+            \newpage
+
+            \begin{algorithm}[H]
+                \SetAlgoLined
+                \KwResult{Write here the result }
+                 initialization\;
+                 \While{While condition}{
+                  instructions\;
+                  \eIf{condition}{
+                   instructions1\;
+                   instructions2\;
+                   }{
+                   instructions3\;
+                  }
+                 }
+                 \caption{How to write algorithms}
+            \end{algorithm}
+\end{document}
